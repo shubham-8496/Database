@@ -1,0 +1,21 @@
+
+
+
+Q1 - > primary key in Customers table is cnum.
+
+===============================================================================
+
+Q2 - >In Customers table 4th column is rating.
+
+===============================================================================
+
+Q3 - > 	row = tuple,entity,opportunity,
+	column = relation,entity class,applet,matrix.
+
+===============================================================================
+
+Q4 -> 	i.   In DBMS data stored sequentially in file, where as in RDBMS table is not a file, every row is file.
+	ii.   Rows of table are scattered all over the DB server HD.
+	iii.   When you insert into table, wherever system finds the free space in the DB server HD it will stored row then.
+	iv.   The reason that RDBMS does this is to speed up the insert statement.
+	v   When you select table, the order of rows in the output depends on the row address.
