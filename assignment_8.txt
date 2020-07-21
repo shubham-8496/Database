@@ -1,0 +1,18 @@
+1.
+--> select onum,snum,amt,(12/100)*AMT '12% commision'  from orders;
+
+
+===================================================================================
+2.
+--> select city,max(rating) from customers group by city order by max(rating) desc;
+
+
+===================================================================================
+3.
+--> select rating, cname,cnum from customers order by rating desc;
+
+===================================================================================
+4.
+--> select count(odate)as total,odate from orders group by odate order by total desc;
+
+===================================================================================
