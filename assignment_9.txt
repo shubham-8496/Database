@@ -1,0 +1,20 @@
+1.
+select cname,sname,comm from customers,salespeople where salespeople.snum=customers.snum;
+
+===============================================================================================
+
+2.
+ select sname,cname,onum from customers,salespeople,orders 
+	where salespeople.snum=customers.snum 
+		and customers.cnum=orders.cnum;
+================================================================================================
+
+3.
+select cname,sname,comm from customers,salespeople 
+	where salespeople.snum=customers.snum 
+		having comm>0.12;
+=================================================================================================
+4.
+	SELECT s.sname, c.cname, o.amt*s.comm AS "comm"
+	FROM orders o, customers c, salespeople s
+	WHERE c.rating > 100 AND o.cnum=c.cnum AND o.snum=s.snum;
