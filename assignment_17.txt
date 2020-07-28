@@ -1,0 +1,35 @@
+-- 1) Create the Orders table so that all onum values as well as all 
+#combinations of cnum and snum are different from one another,
+--    and so that NULL values are excluded from the date field.
+
+create table orders_1 (
+	onum int (4) primary key,
+    odate date not null,
+    cnum int(4) unique,
+    snum int (4) unique
+);
+==============================================================================================================
+
+-- 2) Create the Salespeople table so that the default commission is 10% 
+#	with no NULLS permitted, snum is the primary key, and all names fall alphabetically 
+#	between A and M, inclusive (assume all names will be uppercase).
+
+create table salespeople_3 (
+	Snum int (4) primary key,
+    Sname varchar(10)  check( substr(upper(sname),1,1) between 'A'and 'B'),
+    City varchar(10),
+    Comm float(3,2) default 0.10 
+);
+
+==============================================================================================================
+
+-- 3) Create the Orders table, making sure that the onum is greater than the cnum, 
+#	and the cnum is greater that the snum. Allow no NULLS in any of these three fields.
+create table orders_2 (
+	onum int (4),
+    cnum int(4) ,
+    snum int (4),
+    primary key(onum,snum,cnum),
+    constraint demo check (onum>cnum and cnum>snum)
+);
+==============================================================================================================
