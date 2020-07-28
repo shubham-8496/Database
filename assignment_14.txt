@@ -1,0 +1,16 @@
+Q1.
+-->	insert into salespeople values (1100,'Blanco','San Jose',NULL);
+
+=====================================================================================================
+Q2.
+-->	delete from orders where cnum =(select cnum from customers where cname='clemens');
+
+======================================================================================================
+Q3.
+-->	update customers set rating =rating+100 where city ='rome';
+
+======================================================================================================
+Q4.
+-->	update customers set snum = 1004 where  snum = (select snum from salespeople where sname='motika');
+
+===================================================================================================
